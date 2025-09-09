@@ -1,103 +1,107 @@
-import Image from "next/image";
+import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <main
+      className="h-screen overflow-y-scroll snap-y snap-mandatory"
+    >
+      {/* Opening Section */}
+      <section className="h-screen flex flex-col items-center justify-center bg-pink-100 snap-start">
+        <p>YOU'RE INVITED TO OUR WEDDING!</p>
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/av_logo.png"
+          alt="Opening"
+          width={500}
+          height={500}
+          className="mb-6"
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+        <p>KEPADA YTH, BAPAK/IBU/SAUDARA/I</p>
+        <p>MICHAEL</p>
+        <button 
+          className="bg-transparent border border-gray-400 text-gray-700 font-semibold py-2 px-4 rounded hover:bg-g mt-5 active:scale-95"
+        >Buka Undangan</button>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Section Kedua */}
+      <section className="h-screen flex flex-col items-center justify-center bg-white snap-start p-[20px] space-y-8">
+        <h1>Groom & Bride</h1>
+        
+        {/* Box Pengantin Pria */}
+        <div className="flex items-center gap-6">
+          <Image
+            src="/men.png"
+            alt="Groom"
+            width={200}
+            height={500}
+            className=""
+          />
+          <div>
+            <p>Nama Pengantin Pria</p>
+            <p>Anak Pertama Dari</p>
+            <p>Nama Orang Tua Pria</p>
+            <p>&</p>
+            <p>Nama Orang Tua Pria</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        
+        {/* Box Pengantin Wanita */}
+        <div className="flex items-center gap-6">
+          <div>
+            <p>Nama Pengantin Wanita</p>
+            <p>Anak Pertama Dari</p>
+            <p>Nama Orang Tua Wanita</p>
+            <p>&</p>
+            <p>Nama Orang Tua Wanita</p>
+          </div>
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/women.png"
+            alt="Bride"
+            width={200}
+            height={500}
+            className=""
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+        </div>
+      </section>
+
+      {/* Section Ketiga */}
+      <section className="h-screen flex flex-col items-center bg-pink-50 snap-start py-[50px] px-[20px]">
+        <h1 className="text-center">MENGUNDANG ANDA UNTUK HADIR DI HARI BAHAGIA KAMI PADA</h1>
+        
+        <div className="relative w-3/4 h-8">
+          <Image 
+            src='/text-divider.png'
+            alt="text-divider"
+            fill
+            className="object-cover transform scale-y-[0.5] scale-x-[0.5]" 
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+        </div>
+        <p className="my-1">Sabtu, 11 Oktober 2025</p>
+        <div className="relative w-3/4 h-8">
+          <Image 
+            src='/text-divider.png'
+            alt="text-divider"
+            fill
+            className="object-cover transform scale-y-[-0.5] scale-x-[0.5]" 
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        </div>
+        
+        <div className="h-full flex flex-col items-center justify-around">
+          <div className="bg-white p-5">
+            <p>Pemberkatan</p>
+            <p>Sabtu, 11 Oktober 2025</p>
+            <p>09:00 - 10:00 WIB</p>
+            <p>Gereja Santo Petrus Purwosari </p>
+            <p>Slamet Riyadi St No.370, Penumping, Laweyan, Surakarta City, Central Java 57141</p>
+          </div>
+          <div className="bg-white p-5">
+            <p>Pemberkatan</p>
+            <p>Sabtu, 11 Oktober 2025</p>
+            <p>11:00 - Selesai</p>
+            <p>Gedung Dwidarma (Belakang Gereja)</p>
+            <p>Slamet Riyadi St No.370, Penumping, Laweyan, Surakarta City, Central Java 57141</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
 }
