@@ -7,7 +7,7 @@ export default function Home() {
     >
       {/* Opening Section */}
       <section className="h-screen flex flex-col items-center justify-center bg-pink-100 snap-start">
-        <p>YOU'RE INVITED TO OUR WEDDING!</p>
+        <p>YOU ARE INVITED TO OUR WEDDING!</p>
         <Image
           src="/av_logo.png"
           alt="Opening"
