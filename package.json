@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "next build && gh-pages -d out"
+    "deploy": "next build && gh-pages -d out -r git@github.com:Sigaeasu/wedding-invitation.git"
   },
   "dependencies": {
     "next": "15.5.2",
