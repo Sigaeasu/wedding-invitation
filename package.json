@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "npm run build && gh-pages -d out -r git@github.com:Sigaeasu/wedding-invitation.git -b gh-pages"
+    "deploy": "npm run build && touch out/.nojekyll && gh-pages -d out -r git@github.com:Sigaeasu/wedding-invitation.git -b gh-pages"
   },
   "dependencies": {
     "next": "15.5.2",

@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isProd ? "/wedding-invitation" : "",
+  },
 };
 
 export default nextConfig;

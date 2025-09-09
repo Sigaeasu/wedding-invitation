@@ -1,6 +1,8 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   return (
     <main
       className="h-screen overflow-y-scroll snap-y snap-mandatory"
@@ -9,7 +11,7 @@ export default function Home() {
       <section className="h-screen flex flex-col items-center justify-center bg-pink-100 snap-start">
         <p>YOU ARE INVITED TO OUR WEDDING!</p>
         <Image
-          src="/av_logo.png"
+          src={`${basePath}/av_logo.png`}
           alt="Opening"
           width={500}
           height={500}
@@ -29,7 +31,7 @@ export default function Home() {
         {/* Box Pengantin Pria */}
         <div className="flex items-center gap-6">
           <Image
-            src="/men.png"
+            src={`${basePath}/men.png`}
             alt="Groom"
             width={200}
             height={500}
@@ -54,7 +56,7 @@ export default function Home() {
             <p>Nama Orang Tua Wanita</p>
           </div>
           <Image
-            src="/women.png"
+            src={`${basePath}/women.png`}
             alt="Bride"
             width={200}
             height={500}
@@ -69,7 +71,7 @@ export default function Home() {
         
         <div className="relative w-3/4 h-8">
           <Image 
-            src='/text-divider.png'
+            src={`${basePath}/text-divider.png`}
             alt="text-divider"
             fill
             className="object-cover transform scale-y-[0.5] scale-x-[0.5]" 
@@ -78,7 +80,7 @@ export default function Home() {
         <p className="my-1">Sabtu, 11 Oktober 2025</p>
         <div className="relative w-3/4 h-8">
           <Image 
-            src='/text-divider.png'
+            src={`${basePath}/text-divider.png`}
             alt="text-divider"
             fill
             className="object-cover transform scale-y-[-0.5] scale-x-[0.5]" 
